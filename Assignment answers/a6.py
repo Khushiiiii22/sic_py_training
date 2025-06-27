@@ -1,11 +1,11 @@
 #  Check if a +ve integer is Perfect square
 
                                
+import math
+
 positive_integer = int(input('Enter number: '))
-  
-if(int(positive_integer**0.5)**2 == positive_integer):
-    print(positive_integer , 'is a perfect square')
 
+if math.isqrt(positive_integer) ** 2 == positive_integer:
+    print(positive_integer, 'is a perfect square')
 else:
-     print(positive_integer , 'is not a perfect square')
-
+    print(positive_integer, 'is not a perfect square')
