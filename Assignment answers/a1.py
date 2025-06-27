@@ -7,5 +7,5 @@ for i in biggest_number:
     if i > max:
         max = i
 
-print('The biggest digit is:', max )
+print('The biggest digit is: ', max )
         

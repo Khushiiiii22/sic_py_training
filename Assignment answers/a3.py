@@ -11,4 +11,4 @@ for i in prime_digit:
     if i in prime_digits:
         count += 1
 
-print('The number of prime digits are:', count)
+print('The number of prime digits are:', count)   
