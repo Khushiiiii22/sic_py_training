@@ -1,1 +1,5 @@
-# Errors in python
+#Errors in python
+
+1.Name Errors
+2.Value Errors
+3.Type Error
