@@ -4,3 +4,4 @@
 2.Value Errors
 3.Type Error
 4.Recursion error
+Index error
