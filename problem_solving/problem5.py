@@ -14,4 +14,4 @@ for i in range(n-1):
 
 oranges[k] , pivot = pivot , oranges[k]
 
-print(' '.join(map(str, oranges))) 
+print(' '.join(map(str, oranges))) #to join and print
