@@ -1,0 +1,126 @@
+For do while loop:
+while True():
+   statements......
+
+statement ...... 
+
+
+
+->
+Object oriented programming
+
+
+
+
+
+
+
+
+
+for i in range(m):
+numerator = n ** 2 ** i
+denominator
+
+Array
+look up: accessing elemnts in an array
+
+assuming size of an array is fixed,  
+
+4 digit number
+4596
+9654
+4569: increasing order
+5058
+8550
+0558
+7992
+9972
+2799
+7173
+7731
+1377
+6354
+6543
+3456
+3087
+8730
+0378
+8352
+8532
+2358
+6174
+7641
+1467
+6174
+
+6174 is the karpekar's const
+code area
+global data segment
+stack area
+heap area 
+
+Linear search
+Binary search
+Bubble sort
+Sequential sort
+Insertion sort
+Merge Sort
+Quick sort
+
+
+Multi-Threading 
+Threads can be usde for linear search to increase the speed of search
+Space Efficency
+
+Big O Properties (Worst Case)
+It finds effeicency on the input size
+It purpose id not to find the exact efficeny, rather to reveal the order in which the efficiency is. 
+It assumes n to be very big
+
+Binary Search
+It should be sorted in either increasing/decreasing order.
+Set the mid element
+First search the left half, Then the right half
+  do while loop (As the number of element is not fixed)
+Time efficiency = log(base 2)n
+
+Bubble Sort 
+worst case efficiency is n square
+n iterations
+
+Selection Sort
+ ------------------------------------------------------------------------------------------------------------
+
+Linked list (list of linked nodes)
+static array
+dynamic array
+
+memory leak:
+not able to get reference of another data as one data is deleted
+
+pointer:
+address of another data
+addres: memory location number
+
+wild pointer: uninitialized pointer 
+
+*e = null (Null pointer) -> not pointing to any memory location
+
+dangling: 
+const pointer : value cannot change
+1.pinter to a constant : via the pointer you cannot modify the value of the Object
+2. const pointer : this pointer cannot point to another Object
+
+----------------------------------------------------------------------------------------------------------------
+Singly Linked list
+first , head 
+application
+linkedlist class(8)          
+
+
+Double Linked list
+Binary search tree
+
+Balancing bst
+self balanced bst (AVL tree)
+
