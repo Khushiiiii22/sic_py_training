@@ -25,7 +25,7 @@ Array
 look up: accessing elemnts in an array
 
 assuming size of an array is fixed,  
-
+-----------------------------------------------------------------------------------------------------------------
 4 digit number
 4596
 9654
@@ -58,7 +58,7 @@ code area
 global data segment
 stack area
 heap area 
-
+---------------------------------------------------------------------------------------------------------------------------
 Linear search
 Binary search
 Bubble sort
