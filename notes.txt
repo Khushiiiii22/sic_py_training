@@ -124,3 +124,73 @@ Binary search tree
 Balancing bst
 self balanced bst (AVL tree)
 
+-----------------------------------------------------------------------------------------------------------------------
+
+OOPS (Object Oriented Programming concepts)
+Inheritance:
+when child class inherits from parent class (to inherit the entire work done in the sdlc and beyond)
+single , hierarchical , multiple (Types of Inheritancce)
+-code reuse 
+- add anew feature / overide the existing feature 
+
+it is implementation of (is a) relationship
+reusimg the existing sol.
+the child clss independently is not a type
+
+the refernce of child cannot refer to the parent as the child has more features... 
+public setter / getter to access the private element of parents class from the child..
+
+super menthod : to uplift values to the parent [it is automatically called by the constructor] 
+parent object is created first
+-parent-most_class 
+self.head = none  (To create private method in parent class)
+popo = plain old python object (allows to do certain things nothing related with applicaion [to compare two values or initialize the values setting the object and reading the object])
+
+
+ Polymorphism :
+ no static polymorphism in python (no function overloading in python, in python there is no compile time only runtime and this function requires compile time)
+
+
+  Polymorphism means "many forms." In programming, it refers to the ability for functions, methods, or operators to process objects differently based on their class or data type
+  
+
+
+Abstraction :
+Abstraction means hiding the complex implementation details of a system and exposing only the essential features needed for interaction
+--easier way to give the user use the interface ( it seperate and the use)
+
+
+Encapsulation:
+It is the bundling of data (attributes) and methods (functions) that operate on that data into a single unit (class), restricting direct access to some components
+
+-> binding of the data. It is used to do the abstraction method.
+
+Abs and encapsulation are two faces of the same coin . 
+
+private method in python using (__underscore) [__str__ ]
+
+
+When a function is called:
+-Prologue  
+-Business Logic 
+-Epilogue
+
+
+-static member :
+
+class Cubical:
+    str printer
+    def __init__(self):
+        chair
+        mug
+        computer
+    @static
+    def get_printer(cls)
+        return printer
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
