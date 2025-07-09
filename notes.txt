@@ -192,5 +192,11 @@ class Cubical:
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+numpy & panadas
+
+numpy-> pip install numpy
+scipy -> pip install scipy
+from scipy import stats (for accessing any statistics function)
+
 
 
