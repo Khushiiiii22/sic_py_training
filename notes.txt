@@ -199,4 +199,12 @@ scipy -> pip install scipy
 from scipy import stats (for accessing any statistics function)
 
 
+------------------------------------------------------------------------------------------------------------
+PDB = Python Debugger
+Tracing the Logic  
+
+python -m pdb your_script_name.py
+
+import pdb
+pdb.set_trace()
 
