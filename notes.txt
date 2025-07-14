@@ -192,10 +192,31 @@ class Cubical:
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 
 open os : loading the file from harddisk to ram 
 close : before saving it is presnt in the cache
 save : save it to the harddisk
 in python(read means it will open and start reading)
+=======
+numpy & panadas
+
+numpy-> pip install numpy
+scipy -> pip install scipy
+from scipy import stats (for accessing any statistics function)
+
+
+------------------------------------------------------------------------------------------------------------
+PDB = Python Debugger
+Tracing the Logic  
+
+python -m pdb your_script_name.py
+
+import pdb
+pdb.set_trace()
+
+--------------------------------------------------------------------------------------------------------------------
+
+>>>>>>> cfe76dceb76615c1e068c15124d2473826e0f834
 
 
