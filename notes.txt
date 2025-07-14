@@ -193,4 +193,9 @@ class Cubical:
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+open os : loading the file from harddisk to ram 
+close : before saving it is presnt in the cache
+save : save it to the harddisk
+in python(read means it will open and start reading)
+
 
