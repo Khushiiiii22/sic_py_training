@@ -1,0 +1,47 @@
+<!-- navbar.html -->
+<header class="navbar-header">
+  <nav class="navbar container">
+    <div class="nav-brand">
+      <div class="hero-content">
+          <img src="{{ url_for('static', filename='images/nykaa_logo.png') }}" alt="Nykaa Logo" height=80>
+            <span class="nav-title">Skincare Analysis</span>
+      </div>
+
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="{{ url_for('main.index') }}" class="nav-link {% if request.path == url_for('main.index') %}active{% endif %}">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('main.ratings') }}" class="nav-link {% if request.path == url_for('main.ratings') %}active{% endif %}">
+          <i class="fas fa-star"></i> Ratings
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('main.brands') }}" class="nav-link {% if request.path == url_for('main.brands') %}active{% endif %}">
+          <i class="fas fa-tags"></i> Brands
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('main.pricing') }}" class="nav-link {% if request.path == url_for('main.pricing') %}active{% endif %}">
+          <i class="fas fa-rupee-sign"></i> Pricing
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('main.products') }}" class="nav-link {% if request.path == url_for('main.products') %}active{% endif %}">
+          <i class="fas fa-list"></i> Products
+        </a>
+      </li>
+
+      <li>
+        <!-- Stand-out CTA button, styled as a nav-link: good for dashboards/hackathons -->
+        <a href="{{ url_for('main.upload_csv') }}" class="btn btn-outline" style="margin-left: 4px;">
+          <i class="fas fa-upload"></i> Analyze Your Own Data
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+

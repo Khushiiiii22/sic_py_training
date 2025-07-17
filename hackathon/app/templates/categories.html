@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="categories-analysis section">
+    <h2 class="section-title">Product Category Distribution</h2>
+    <p class="text-center mb-3">
+        This analysis shows the most common skincare product categories on Nykaa.
+    </p>
+
+    <div class="chart-container fade-in">
+        <img src="{{ url_for('static', filename='images/category_count.png') }}" alt="Category Distribution"
+             style="max-width:100%;height:auto;">
+    </div>
+    
+    <div class="data-table-container mt-4">
+        <h3>Top 10 Categories:</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Product Count</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if top_categories %}
+                {% for category, count in top_categories.items() %}
+                <tr>
+                    <td>{{ category }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr><td colspan="2" class="text-center">No category data found.</td></tr>
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="ratings-analysis section">
+    <h2 class="section-title">Customer Ratings Distribution</h2>
+    <p class="text-center mb-3">
+        This analysis shows how customers rate skincare products on Nykaa.
+    </p>
+
+    {% if not rating_pie and not rating_bar and not rating_trend %}
+        <div class="alert alert-warning" style="text-align:center; margin-top:40px;">
+            <i class="fas fa-exclamation-triangle"></i>
+            No ratings data available to visualize. Please check the uploaded/loaded review files.
+        </div>
+    {% endif %}
+
+    <div class="chart-row" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+        {% if rating_pie %}
+            <div style="flex:1 1 300px; max-width: 350px;">
+                <h4 style="text-align:center; color:#d62e71; font-weight:600;">Pie Chart</h4>
+                <img src="{{ rating_pie }}" alt="Rating Pie Chart" style="width:100%; max-width:350px; border-radius:12px; box-shadow:0 2px 12px #ccc;">
+            </div>
+        {% endif %}
+        {% if rating_bar %}
+            <div style="flex:1 1 420px; max-width: 480px;">
+                <h4 style="text-align:center; color:#d62e71; font-weight:600;">Bar Graph</h4>
+                <img src="{{ rating_bar }}" alt="Rating Bar Graph" style="width:100%; max-width:480px; border-radius:12px; box-shadow:0 2px 12px #ccc;">
+            </div>
+        {% endif %}
+    </div>
+
+    {% if rating_trend %}
+    <div class="mt-5" style="max-width:780px; margin: 32px auto 0 auto;">
+        <h4 style="text-align:center; color:#d62e71; font-weight:600;">Trends Over Time</h4>
+        <img src="{{ rating_trend }}" alt="Average Rating over Time" style="width:100%; border-radius:12px; box-shadow:0 2px 12px #ccc;">
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

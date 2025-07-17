@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="sentiment-analysis section">
+    <h2 class="section-title">Review Sentiment Analysis</h2>
+    <p class="text-center mb-3">
+        This analysis shows the sentiment distribution of customer reviews.
+    </p>
+
+    <div class="chart-container fade-in">
+        <img src="{{ sentiment_dist | default(url_for('static', filename='images/sentiment_dist.png')) }}"
+             alt="Sentiment Distribution"
+             class="responsive-image" style="max-width:100%;height:auto;">
+    </div>
+
+    <!-- Optionally, add categories bar chart as well -->
+    {# 
+    <div class="chart-container fade-in mt-4">
+        <img src="{{ sentiment_cats | default(url_for('static', filename='images/sentiment_cats.png')) }}"
+             alt="Sentiment Categories" style="max-width:100%;height:auto;">
+    </div>
+    #}
+
+    <div class="insights mt-4">
+        <h3><i class="fas fa-lightbulb text-accent"></i> Key Insights:</h3>
+        <ul>
+            <li>Most reviews are positive or very positive</li>
+            <li>Negative reviews are relatively rare</li>
+            <li>Neutral reviews often mention product features without strong emotion</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

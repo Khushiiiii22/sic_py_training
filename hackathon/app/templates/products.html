@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="products-analysis section">
+    <h2 class="section-title">Top Rated Products</h2>
+    <p class="text-center mb-3">
+        These are the highest rated skincare products on Nykaa with at least 100 reviews.
+    </p>
+
+    <div class="data-table-container mt-2">
+        {% if top_products is not none and top_products.shape[0] > 0 %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Brand</th>
+                    <th>Rating</th>
+                    <th>Rating Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for _, product in top_products.iterrows() %}
+                <tr>
+                    <td>{{ product['name'] }}</td>
+                    <td>{{ product['brand'] }}</td>
+                    <td>{{ "%.1f"|format(product['rating']) }}</td>
+                    <td>{{ product['rating_count'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="text-center">No products found with at least 100 reviews.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

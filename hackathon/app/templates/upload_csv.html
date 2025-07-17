@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="upload-section section">
+    <div class="container">
+        <h2 class="section-title" style="color: var(--primary, #d62e71); text-align:center;">
+            Upload CSV Files for Nykaa Analysis
+        </h2>
+        <p class="text-center mb-3" style="color: #4B4453;">
+            Upload one or more of your own <b>products</b>, <b>reviews</b>, or <b>brands</b> CSV files.<br>
+            <span style="color:#9c27b0;">Any not selected will use demo data automatically—no need to upload all 3.</span>
+        </p>
+        <form 
+            method="post" 
+            enctype="multipart/form-data" 
+            class="upload-form p-4 shadow rounded fade-in"
+            style="max-width: 420px; margin: 0 auto; background: #fff;"
+        >
+            <div class="form-group mb-3">
+                <label for="csv-products" class="form-label">
+                    <strong style="color:var(--primary,#d62e71);">Products CSV</strong>
+                </label>
+                <input id="csv-products" type="file" name="products" accept=".csv" class="form-control"
+                       style="border-color: #e3e7ef;">
+            </div>
+            <div class="form-group mb-3">
+                <label for="csv-reviews" class="form-label">
+                    <strong style="color:var(--primary,#d62e71);">Reviews CSV</strong>
+                </label>
+                <input id="csv-reviews" type="file" name="reviews" accept=".csv" class="form-control" style="border-color: #e3e7ef;">
+            </div>
+            <div class="form-group mb-4">
+                <label for="csv-brands" class="form-label">
+                    <strong style="color:var(--primary,#d62e71);">Brands CSV</strong>
+                </label>
+                <input id="csv-brands" type="file" name="brands" accept=".csv" class="form-control" style="border-color: #e3e7ef;">
+            </div>
+            <button class="btn btn-primary w-100" style="background: linear-gradient(90deg,#d62e71,#FF6F91); border:none; margin-top: 6px;" type="submit">
+                <i class="fas fa-upload"></i> Analyze My Data
+            </button>
+        </form>
+        <p class="mt-4 text-center" style="color:#888; font-size:0.97em;">
+            <i class="fas fa-info-circle"></i>
+            Leave any input blank to use the default demo data for that file type.
+        </p>
+    </div>
+</section>
+
+<style>
+.upload-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 0 0 0;
+}
+.upload-form {
+    box-shadow: 0 6px 28px rgba(214,46,113,0.10);
+    border-radius: 16px;
+    background: #fff;
+    width: 100%;
+    max-width: 430px;
+    margin-top: 2rem;
+}
+.upload-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+.upload-form label {
+    margin-bottom: 0.45em;
+    color: #6a6f81;
+    font-size: 1.08rem;
+}
+.upload-form input[type="file"] {
+    background: #f9f9fb;
+    border: 1.6px solid #e3e7ef !important;
+    padding: 9px 10px;
+    border-radius: 6px;
+    font-size: 1em;
+    margin-bottom: 0.25em;
+    transition: border-color 0.2s;
+}
+.upload-form input[type="file"]:focus {
+    outline: none;
+    border-color: #d62e71;
+    box-shadow: 0 0 0 2px rgba(214,46,113,0.08);
+}
+.upload-form .btn-primary {
+    font-size: 1.1rem;
+    letter-spacing: .01em;
+    padding: 0.80em 0;
+    border-radius: 24px;
+    transition: background 0.18s;
+    box-shadow: 0 2px 8px rgba(214,46,113,0.10);
+}
+.upload-form .btn-primary:active,
+.upload-form .btn-primary:focus {
+    background: #d62e71 !important;
+}
+@media (max-width: 650px) {
+    .upload-form {
+        padding: 1.1rem !important;
+        max-width: 98vw;
+    }
+    .upload-section .container {
+        padding: 0 .2rem;
+    }
+}
+</style>
+{% endblock %}
+
+

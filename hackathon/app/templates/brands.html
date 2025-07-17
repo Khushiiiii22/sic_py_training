@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="brands-analysis section">
+    <h2 class="section-title">Brand Popularity Analysis</h2>
+    <p class="text-center mb-3">
+        This analysis compares top skincare brands based on their product count on Nykaa.
+    </p>
+
+    {% if not brand_count and not brand_pie and not brand_price %}
+        <div class="alert alert-warning" style="text-align:center; margin-top:40px;">
+            <i class="fas fa-exclamation-triangle"></i>
+            No brand analysis data available. Please check your product data or CSV upload.
+        </div>
+    {% endif %}
+
+    <div class="chart-row" style="display: flex; flex-wrap: wrap; gap: 28px; justify-content: center;">
+        {% if brand_count %}
+        <div style="flex: 1 1 350px; max-width: 480px;">
+            <h4 style="text-align:center; color:#d62e71; font-weight:600;">Brand Counts (Bar)</h4>
+            <img src="{{ brand_count }}" alt="Brand Bar Chart" class="responsive-image" style="width:100%; max-width:480px; border-radius:12px; box-shadow:0 2px 12px #ccc;">
+        </div>
+        {% endif %}
+        {% if brand_pie %}
+        <div style="flex: 1 1 300px; max-width: 350px;">
+            <h4 style="text-align:center; color:#d62e71; font-weight:600;">Brand Popularity (Pie)</h4>
+            <img src="{{ brand_pie }}" alt="Brand Pie Chart" class="responsive-image" style="width:100%; max-width:350px; border-radius:12px; box-shadow:0 2px 12px #ccc;">
+        </div>
+        {% endif %}
+    </div>
+
+    {% if brand_price %}
+    <div class="mt-4" style="max-width: 760px; margin: 0 auto;">
+        <h4 class="text-center" style="color:#d62e71; font-weight:600;">Price Distribution by Top Brand</h4>
+        <img src="{{ brand_price }}" alt="Brand Price Distribution" class="responsive-image" style="width:100%; max-width:760px; border-radius:12px; box-shadow:0 2px 12px #ccc;">
+    </div>
+    {% endif %}
+
+    <div class="data-table-container mt-5">
+        <h3>Top 10 Brands by Product Count:</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Product Count</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if brand_counts %}
+                {% for brand, count in brand_counts.items() %}
+                <tr>
+                    <td>{{ brand }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr><td colspan="2" class="text-center">No brand data available.</td></tr>
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

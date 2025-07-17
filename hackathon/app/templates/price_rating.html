@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="price-rating-analysis section">
+    <h2 class="section-title">Price vs. Rating Analysis</h2>
+    <p class="text-center mb-3">
+        This analysis explores the relationship between product price and customer ratings in our Nykaa dataset.
+    </p>
+
+    <div class="chart-container fade-in">
+        <!-- Use the correct filename as per your backend! -->
+        <img src="{{ url_for('static', filename='images/price_rating.png') }}" 
+             alt="Price vs Rating Scatter Plot"
+             class="responsive-image"
+             style="max-width: 100%; height: auto;"/>
+    </div>
+
+    <div class="insights mt-4">
+        <h3><i class="fas fa-lightbulb text-accent"></i> Key Insights:</h3>
+        <ul>
+            <li>Most highly rated products are in the mid-price range.</li>
+            <li>Expensive products don’t necessarily get higher ratings.</li>
+            <li>There are excellent low-cost options with high ratings.</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
